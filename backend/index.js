@@ -7,6 +7,7 @@ import authRouter from './routes/authRoutes.js'
 dotenv.config()
 const app = express()
 app.use(cors())
+app.use(express.json())
 
 await connectDB()
 app.get('/', (req,res)=>{
