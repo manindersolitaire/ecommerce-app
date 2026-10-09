@@ -5,6 +5,7 @@ import connectDB from './config/db.js'
 import authRouter from './routes/authRoutes.js'
 import productRouter from './routes/productRoutes.js'
 
+
 dotenv.config()
 const app = express()
 app.use(cors())
