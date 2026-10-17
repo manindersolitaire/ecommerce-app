@@ -1,6 +1,7 @@
 import express from 'express'
 import protect from '../middleware/authMiddleware.js'
-import { admin } from '../middleware/adminMiddleware.js'
+import { admin } from '../ middleware/adminMiddleware.js'
+import { addOrderItems, getMyOrders, getOrders, updateOrderStatus } from '../controllers/orderController.js'
 
 const orderRouter =  express.Router()
 

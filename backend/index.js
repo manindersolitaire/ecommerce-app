@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import authRouter from './routes/authRoutes.js'
 import productRouter from './routes/productRoutes.js'
+import orderRouter from './routes/orderRoutes.js'
+import paymentRoutes from './routes/paymentRoutes.js'
 
 
 dotenv.config()
@@ -18,6 +20,9 @@ app.get('/', (req,res)=>{
 
 app.use('/api/auth', authRouter)
 app.use('/api/product', productRouter)
+app.use('/api/order', orderRouter)
+app.use('/api/payment', paymentRoutes)
+app.use('/api/analytics', paymentRoutes)
 
 const PORT = process.env.PORT || 5000
 
